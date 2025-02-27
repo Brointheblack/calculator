@@ -1,6 +1,11 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        Calculator calculator = new Calculator();
-        calculator.scanInput();
+        try {
+            Calculator calculator = new Calculator();
+            calculator.scanInput();
+        } catch (NumberFormatException e) {
+            System.out.println("Неверный формат");
+        }
+
     }
 }
