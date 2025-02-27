@@ -10,10 +10,10 @@ public class Calculator {
         int num_2 = Integer.parseInt(parts[2]);
         String oper = parts[1];
         sc.close();
-        int result = calcResult(num_1, num_2, oper);
+        double result = calcResult(num_1, num_2, oper);
         printResult(result);
     }
-    public int calcResult(int num_1, int num_2, String oper){
+    public double calcResult(int num_1, int num_2, String oper){
         switch (oper) {
             case "+":
                 return add(num_1, num_2);
@@ -41,14 +41,15 @@ public class Calculator {
         return a * b;
     }
 
-    public int div(int a, int b){
+    public double div(int a, int b){
         if (b == 0){
             System.out.println("Делить на ноль нельзя! ");
         }
-        return a / b;
+        double res = (double) a / b;
+        return res;
     }
 
-    public void printResult(int result) {
+    public void printResult(double result) {
         System.out.println("Результат: " + result);
     }
 
